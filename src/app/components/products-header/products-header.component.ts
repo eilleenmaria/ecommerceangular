@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-products-header',
-  template: `
-    <p>
-      products-header works!
-    </p>
-  `,
+  templateUrl: './products-header.component.html',
   styles: [
   ]
 })
-export class ProductsHeaderComponent {
-
+export class ProductsHeaderComponent implements OnInit{
+  @Output() columnsCountChange = new EventEmitter<number>();
+  sort = 'desc';
+  itemsShowCount = 12;
+  constructor(){}
+  ngOnInit():void{}
+  onSortUpdated(newSort:string):void{
+    this.sort = newSort;
+  }
+  onItemsUpdated(count:number):void{
+    this.itemsShowCount= count;
+  }
+  onColumnsUpdated(columns: number): void{
+    this.columnsCountChange.emit(columns);
+  }
 }
