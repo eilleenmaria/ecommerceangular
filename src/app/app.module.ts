@@ -16,6 +16,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './components/products-header/products-header.component';
@@ -45,6 +47,7 @@ import { CartComponent } from './pages/cart/cart.component';
     MatCardModule,
     MatMenuModule,
     MatButtonModule,
+    MatTableModule,
     MatIconModule,
     MatExpansionModule,
     MatListModule,
