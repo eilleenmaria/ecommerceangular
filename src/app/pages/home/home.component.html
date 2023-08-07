@@ -12,9 +12,9 @@
         [cols]="cols"
         [rowHeight]="rowHeight"
         >
-            <mat-grid-tile>
-                <!-- (addToCart)="onAddtoCart" -->
-                <app-product-box               
+            <mat-grid-tile>                
+                <app-product-box   
+                (addToCart)="onAddToCart($event)"            
                 class="w-full" [fullwidthmode]="cols === 1"></app-product-box>
             </mat-grid-tile> 
             
